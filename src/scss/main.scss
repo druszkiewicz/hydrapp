@@ -5,6 +5,7 @@
 
 html {
    box-sizing: border-box;
+   background: $blue;
 }
 
 *,
@@ -14,33 +15,63 @@ html {
 }
 
 body {
-   color: $yellow;
-   background: $violet;
+   color: #fff;
+   background: $blue;
    font-family: 'Roboto';
-}
-
-.kolor {
-   fill: rgb(103, 142, 151);
-}
-
-.kontener {
+   font-weight: 500;
+   min-height: 100vh;
    display: flex;
-   justify-content: center;
    align-items: center;
-   max-height: 100vh;
-   position: relative;
+   justify-content: center;
+   padding: 16px;
 }
 
-.licznik {
-   position: fixed;
+.button-add {
+   padding: 12px;
+   font-size: 18px;
+   color: #000;
+   border: none; //ustawić na buttonach
+   border-radius: 4px;
+   background: #fff;
+   min-width: 216px;
+   box-shadow: 0px 4px rgba(0, 0, 0, 25);
+   margin: 48px 0 26px;
+}
+
+.button-remove {
+   background: none;
+   border: none;
+   padding: 12px;
+   fontsize: 14px;
+   color: #F5E5E7;
+
+}
+
+.counter {
+   width: 280px;
+   height: 280px;
+   background: url('../assets/img/water-glass.svg') center center;
+   background-size: contain;
+   display: flex;
+   align-items: center; //środkowanie licznika
+   justify-content: center;
+   color: #000;
    font-size: 112px;
-   margin: 32px auto;
-   color: black;
+
+   &__value {
+      display: block;
+      padding-top: 64px;
+   }
+}
+
+.heading {
+   font-size: 55px;
+   margin: 0 0 64px 0;
+   padding: 0;
 }
 
 .main {
    display: flex;
-   justify-content: center;
-   align-items: center;
    flex-direction: column;
+   align-items: center;
 }
