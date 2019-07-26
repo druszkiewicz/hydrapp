@@ -74,6 +74,16 @@ body {
 
 .image {
    position: relative;
+   display: flex;
+   align-items: center; //środkowanie licznika
+   justify-content: center;
+
+   &__icon {
+      position: absolute;
+      top: 10px;
+      background: $yellow;
+      border-radius: 80%;
+   }
 }
 
 .main {
