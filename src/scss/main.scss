@@ -16,6 +16,7 @@ html {
 }
 
 body {
+   touch-action: manipulation;
    color: #fff;
    background: $blue;
    font-family: 'Roboto';
