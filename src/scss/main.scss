@@ -6,7 +6,7 @@
 html {
    box-sizing: border-box;
    background: $blue;
-   touch-action: manipulation;
+   // touch-action: manipulation;
 }
 
 *,
@@ -16,7 +16,7 @@ html {
 }
 
 body {
-   touch-action: manipulation;
+   // touch-action: manipulation;
    color: #fff;
    background: $blue;
    font-family: 'Roboto';
@@ -67,6 +67,7 @@ body {
 }
 
 .counter {
+   touch-action: manipulation;
    width: 280px;
    height: 280px;
    // background: url('../assets/img/water-glass.svg') center center;
@@ -86,12 +87,14 @@ body {
 }
 
 .heading {
+   touch-action: manipulation;
    font-size: 55px;
    margin: 0 0 64px 0;
    padding: 0;
 }
 
 .image {
+   touch-action: manipulation;
    position: relative;
    display: flex;
    align-items: center; //środkowanie licznika
@@ -106,6 +109,7 @@ body {
 }
 
 .main {
+   touch-action: manipulation;
    display: flex;
    flex-direction: column;
    align-items: center;
