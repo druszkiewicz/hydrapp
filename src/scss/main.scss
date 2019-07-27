@@ -28,6 +28,7 @@ body {
 }
 
 .button-add {
+   touch-action: manipulation;
    padding: 12px;
    font-size: 18px;
    color: #000;
@@ -48,6 +49,7 @@ body {
 }
 
 .button-remove {
+   touch-action: manipulation;
    background: none;
    border: none;
    padding: 12px;
