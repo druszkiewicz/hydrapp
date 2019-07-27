@@ -339,6 +339,8 @@ body {
   padding: 16px; }
 
 .button-add {
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
   padding: 12px;
   font-size: 18px;
   color: #000;
@@ -362,6 +364,8 @@ body {
             transform: scale(1.25); }
 
 .button-remove {
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
   background: none;
   border: none;
   padding: 12px;
