@@ -60,21 +60,27 @@ const waterIcon = document.querySelector('.fileSvg');
 var countOfGlass = 0;
 
 function changeScreen(ilosc) {
+   console.log(ilosc);   
    if (ilosc < 3 && ilosc >= 0) {
       waterColor.setAttribute('fill', fillColors[0]);
       waterIcon.setAttribute('src', 'assets/img/f1.svg');
+      console.log('0-3');
    } else if (ilosc < 6 && ilosc >= 3) {
       waterColor.setAttribute('fill', fillColors[1]);
       waterIcon.setAttribute('src', 'assets/img/f2.svg');
+      console.log('3-6');
    } else if (ilosc < 9 && ilosc >= 6) {
       waterColor.setAttribute('fill', fillColors[2]);
       waterIcon.setAttribute('src', 'assets/img/f3.svg');
+      console.log('6-9');
    } else if (ilosc < 14 && ilosc >= 9) {
       waterColor.setAttribute('fill', fillColors[4]);
       waterIcon.setAttribute('src', 'assets/img/f4.svg');
+      console.log('9-14');
    } else {
       waterColor.setAttribute('fill', fillColors[5]);
       waterIcon.setAttribute('src', 'assets/img/f5.svg');
+      console.log('else');
    }
 }
 
@@ -92,11 +98,12 @@ if (!localStorage.getItem(key)) {
 changeScreen(countOfGlass);
 
 buttonAdd.addEventListener('click', e => {
+   // e.preventDefault();
    localStorage.setItem(key, parseInt(localStorage.getItem(key)) + 1);
    // value.innerHTML = parseInt(value.innerHTML) + 1;
    value.innerHTML = localStorage.getItem(key);
+   countOfGlass = localStorage.getItem(key);
    changeScreen(countOfGlass);
-   countOfGlass++;
 
    // testy
 
@@ -109,12 +116,14 @@ buttonAdd.addEventListener('click', e => {
 });
 
 buttonRemove.addEventListener('click', e => {
+   
    const currentValue = parseInt(localStorage.getItem(key));
    if (currentValue > 0) {
       localStorage.setItem(key, localStorage.getItem(key) - 1);
       value.innerHTML = localStorage.getItem(key);
+      countOfGlass = localStorage.getItem(key);
       changeScreen(countOfGlass);
-      countOfGlass--;
+      
    }
 
    // const currentValue = parseInt(value.innerHTML);
