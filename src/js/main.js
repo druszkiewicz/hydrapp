@@ -98,6 +98,7 @@ if (!localStorage.getItem(key)) {
 changeScreen(countOfGlass);
 
 buttonAdd.addEventListener('click', e => {
+   // buttonAdd.classList.toggle('button-add__transform');
    // e.preventDefault();
    localStorage.setItem(key, parseInt(localStorage.getItem(key)) + 1);
    // value.innerHTML = parseInt(value.innerHTML) + 1;
