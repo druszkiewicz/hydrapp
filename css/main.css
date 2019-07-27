@@ -322,6 +322,8 @@ html {
           box-sizing: inherit; }
 
 body {
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
   color: #fff;
   background: #3767AD;
   font-family: 'Roboto';
